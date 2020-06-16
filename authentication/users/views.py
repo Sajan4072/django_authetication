@@ -11,4 +11,14 @@ def index(request):
     context={
         "user":request.user
     }
-    return render(request,"users/user.html",context)    
+    return render(request,"users/user.html",context) 
+
+def login_view(request):
+    username=request.POST["username"]
+    password=request.POST["password"]
+    user=authenticate(request,usename=username,password=password)
+    if user is not None:
+        login(request,user)
+        return HttpResponseRedirect(reverse("index"))
+    else:
+        return render(request,"users/login.html",{"message":invalid credential})      
