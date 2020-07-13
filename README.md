@@ -5,9 +5,9 @@ Django comes with a built in user authentication system. It handles user account
 Pipfile contains all the prerequisites.
 
 ## Setting up the project
--Use pipenv for virtual environment \
+- Use pipenv for virtual environment\
 `pipenv install --dev`\
--If virtual enviroment is already activated\
+- If virtual enviroment is already activated\
 `pipenv sync         `\
--Or\
+- Or\
 `pipenv sync --dev   `
